@@ -2,8 +2,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_excel(r"D:\VScode\PythonDM101\Python Print\DM101GameSales.xlsx", sheet_name="Cleaned")
-
+df = pd.read_excel("DM101GameSales.xlsx", sheet_name="Cleaned")
 st.title('Game Sales')
 
 st.write('Between 1980 to 2020 the Rise of modern gaming and its Platforms')
@@ -64,8 +63,7 @@ st.pyplot(plt)
 
 #PieChart --Start
 # 1. Load the Regional_Sales sheet from your new file
-df2 = pd.read_excel(r"D:\VScode\PythonDM101\Python Print\DM101GameSales.xlsx", sheet_name="Regional_Sales", header=2)
-
+df2 = pd.read_excel("DM101GameSales.xlsx", sheet_name="Regional_Sales", header=2)
 
 # 2. Extract the sales values
 labels = ["NA Sales", "EU Sales", "JP Sales", "Other Sales"]
