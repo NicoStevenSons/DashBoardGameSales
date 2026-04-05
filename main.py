@@ -18,7 +18,7 @@ def toplabel():
 if page == 'Visualization':
     toplabel()
     #Bar Graphs --Start
-    # get top 10 games by global sales
+    #get top 10 games by global sales
     games_sales = df.groupby("Name")["Global_Sales"].sum().sort_values(ascending=False)
     top_games_sales = games_sales.head(10)
 
@@ -195,10 +195,13 @@ elif page == 'Cleaned Data':
     st.write('The PS2 sheet confirms a market trend where blockbuster sequels and open-world mechanics began to yield the highest return on investment. For a developer or publisher, this data suggests that during the 2000s, investing in established franchises with high replay value was the most successful path to global market penetration')
 
 elif page == 'Raw Data':
+    toplabel()
+    st.header('Raw Data Set')
     rawdata = pd.read_excel("DM101GameSales.xlsx", sheet_name="Raw Data")
     st.write(rawdata)
 
 elif page == 'All Sheets':
+    st.header('All sheets')
     file_path = "DM101GameSales.xlsx"
     
     xls = pd.ExcelFile(file_path)
