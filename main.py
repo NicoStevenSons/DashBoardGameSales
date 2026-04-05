@@ -192,6 +192,7 @@ elif page == 'Cleaned Data':
     st.markdown("<br>", unsafe_allow_html=True)#adds space
     st.header('Top 10 Games in the PS2 Platfrom')
     st.write(PS2)
+    st.write('The PS2 sheet confirms a market trend where blockbuster sequels and open-world mechanics began to yield the highest return on investment. For a developer or publisher, this data suggests that during the 2000s, investing in established franchises with high replay value was the most successful path to global market penetration')
 
 elif page == 'Raw Data':
     rawdata = pd.read_excel("DM101GameSales.xlsx", sheet_name="Raw Data")
