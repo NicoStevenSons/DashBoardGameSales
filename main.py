@@ -86,7 +86,36 @@ if page == 'Visualization':
     st.pyplot(fig)
     #Bar Graphs PS2 --end
 
+    #Bar Graphs genre sales --start
+    genre_df = pd.read_excel("DM101GameSales.xlsx", sheet_name="Genre_Sales")
+    st.markdown("<br>", unsafe_allow_html=True)#adds space
+    st.header('Genre Popularity')
 
+    genre_df.columns = genre_df.columns.str.strip()
+
+    genre_df = genre_df[genre_df["Genre"] != "Grand Total"]
+
+
+    genre_df = genre_df.rename(columns={
+        "Genre": "Genre",
+        "Sum of Global_Sales": "Global_Sales"
+    })
+
+    genre_df = genre_df.sort_values(by="Global_Sales", ascending=False)
+
+    fig, ax = plt.subplots(figsize=(10, 6))
+
+    ax.bar(genre_df['Genre'], genre_df['Global_Sales'], edgecolor='black')
+
+    ax.set_xlabel("Genre")
+    ax.set_ylabel("Global Sales (Millions)")
+    ax.set_title("Video Game Genre Popularity (1980–2017)")
+
+    ax.tick_params(axis='x', rotation=45)
+
+    st.pyplot(fig)
+    #Bar Graphs genre sales --end
+    
 
     #PieChart --Start
     # 1. Load the Regional_Sales sheet from your new file
