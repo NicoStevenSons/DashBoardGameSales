@@ -62,6 +62,7 @@ if page == 'Visualization':
     # display plot
     plt.subplots_adjust(hspace=0.4)
     st.pyplot(plt)
+    st.write('What are the top 10 games during that period in time and how did they shape modern gaming as we know today?')
     #Bar Graphs --end
 
 
@@ -84,6 +85,7 @@ if page == 'Visualization':
     ax.invert_yaxis()
 
     st.pyplot(fig)
+    st.write('The top 10 titles alone account for a significant portion of the platforms success')
     #Bar Graphs PS2 --end
 
     #Bar Graphs genre sales --start
@@ -114,6 +116,7 @@ if page == 'Visualization':
     ax.tick_params(axis='x', rotation=45)
 
     st.pyplot(fig)
+    st.write('The Genre_Sales sheet presents a summary of total video game sales grouped by genre, showing which types of games are the most popular overall')
     #Bar Graphs genre sales --end
     
 
@@ -148,6 +151,7 @@ if page == 'Visualization':
     st.header("Regional Sales Distribution")
     plt.tight_layout()
     st.pyplot(plt)
+    st.write('Which region had the most impact in terms of sales during the entirety, how did they shape how we play games of today?')
     #PieChart --end
 
 
@@ -180,6 +184,7 @@ if page == 'Visualization':
 
     st.header("Timeline of Sales From 1980 to 2017")
     st.pyplot(fig2)
+    st.write(' In what time/year did games get the most traction, and what happened during that time which made gaming so popular to the masses?')
     #linechart --end
     
 
