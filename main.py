@@ -116,7 +116,7 @@ if page == 'Visualization':
     ax.tick_params(axis='x', rotation=45)
 
     st.pyplot(fig)
-    st.write('The Genre_Sales sheet presents a summary of total video game sales grouped by genre, showing which types of games are the most popular overall')
+    st.write('This presents a summary of total video game sales grouped by genre, showing which types of games are the most popular overall')
     #Bar Graphs genre sales --end
     
 
